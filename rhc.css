@@ -26,7 +26,7 @@
 }
 .rhc *,.rhc *::before,.rhc *::after{box-sizing:border-box}
 .rhc [hidden]{display:none!important}
-.rhc h1,.rhc h2,.rhc h3,.rhc h4{font-weight:300;margin:0;text-wrap:balance;letter-spacing:-.02em}
+.rhc h1,.rhc h2,.rhc h3,.rhc h4{font-family:inherit;font-weight:300;margin:0;text-wrap:balance;letter-spacing:-.02em}
 .rhc p,.rhc ul,.rhc ol,.rhc dl,.rhc dd,.rhc figure{margin:0;padding:0}
 .rhc li{list-style:none}
 .rhc img{max-width:100%;display:block}
