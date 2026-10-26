@@ -796,9 +796,9 @@ details.rhc-pp-aged li{padding:8px 0;color:var(--muted);border-bottom:1px solid 
 .rhc .rhc-ab-role{margin-top:10px;font-size:16px;color:#D9CFC0}
 .rhc-ab-spec{margin-top:24px}
 .rhc-ab-spec > div{display:grid;grid-template-columns:8.5em minmax(0,1fr);gap:14px;padding:13px 0;border-top:1px solid rgba(183,152,104,.45)}
-.rhc-ab-spec dt{font:500 11.5px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#CDBFA5}
-.rhc .rhc-ab-spec dd{margin:0;font-size:16.5px;line-height:1.4;color:#FFFDF8;overflow-wrap:anywhere}
-.rhc-ab-spec dd b{display:block;font:400 34px/1 var(--serif);margin-bottom:4px}
+.rhc-ab-spec .rhc-ab-k{font:500 11.5px/1.6 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#CDBFA5}
+.rhc .rhc-ab-spec .rhc-ab-v{margin:0;font-size:16.5px;line-height:1.4;color:#FFFDF8;overflow-wrap:anywhere}
+.rhc-ab-spec .rhc-ab-v b{display:block;font:400 34px/1 var(--serif);margin-bottom:4px}
 .rhc-ab-spec small{display:block;font-size:14px;color:#CDBFA5;margin-top:2px}
 .rhc .rhc-ab-spec a{color:#E3C48E;text-underline-offset:3px}
 .rhc-ab-photo{margin:0;background:var(--panel-2)}
