@@ -36,6 +36,15 @@
     text-decoration-thickness:1px;text-underline-offset:7px}
   #dmg_layout_wrapper > header #dmg_layout_homefinder,
   #dmg_layout_wrapper > header #dmg_layout_homefinder a{font-size:13px;font-weight:600;letter-spacing:.08em;color:#7A5C30}
+  /* The account call to action is a button: outline at rest, filled on hover. Delta fills it with
+     the theme colour on hover, so the text must turn cream with it */
+  #dmg_layout_wrapper > header #dmg_layout_homefinder{border:1px solid #7A5C30;transition:background-color .2s,color .2s}
+  #dmg_layout_wrapper > header #dmg_layout_homefinder:hover,
+  #dmg_layout_wrapper > header #dmg_layout_homefinder:focus-within{background-color:#7A5C30}
+  #dmg_layout_wrapper > header #dmg_layout_homefinder:hover,
+  #dmg_layout_wrapper > header #dmg_layout_homefinder:hover a,
+  #dmg_layout_wrapper > header #dmg_layout_homefinder:focus-within,
+  #dmg_layout_wrapper > header #dmg_layout_homefinder:focus-within a{color:#FFFDF8}
   #dmg_layout_wrapper > header .sub-nav{background:#FFFFFF;border:1px solid #E3DED4;box-shadow:0 12px 28px rgba(26,24,20,.10)}
   /* #dmg_nav_top in these selectors out-ranks Delta's #dmg_advanced_nav #dmg_nav_top ul li a,
      which fills dropdown links with the theme's Primary Color */
