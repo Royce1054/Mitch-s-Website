@@ -660,8 +660,8 @@
 #rhc.rhc .rhc-led-total{grid-template-columns:minmax(0,1fr)}
 #rhc.rhc .rhc-led-with{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.28);padding-top:16px}}
 #rhc.rhc .rhc-sq{background:#1F1B16;color:#FFFDF8}
-#rhc.rhc .rhc-sq-photo{position:relative;margin:0;height:clamp(240px,36vw,500px);overflow:hidden}
-#rhc.rhc .rhc-sq-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+#rhc.rhc .rhc-sq-photo{position:relative;margin:0;height:clamp(240px,50vw,860px);overflow:hidden}
+#rhc.rhc .rhc-sq-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 52%}
 #rhc.rhc .rhc-sq-photo figcaption{position:absolute;right:var(--gut);top:18px;background:#1F1B16;padding:7px 10px;font-size:12.5px;color:#E9E2D6}
 #rhc.rhc .rhc-sq-band{position:relative;padding-block:clamp(44px,5.5vw,84px) clamp(56px,7vw,104px)}
 #rhc.rhc .rhc-sq-band::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:var(--accent)}

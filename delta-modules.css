@@ -298,3 +298,163 @@ html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatc
 #dmg_layout_internal.dmg_internal_subarea_search .dmg_amen_value{font-weight:700;color:#1A1814}
 #dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_banner{background:#1F1B16;
   font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8}
+
+/* ---------- My Home Value (/my-home-value/ and its report.html) ---------- */
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_internal-page{color:#1A1814;
+  font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif}
+
+/* the address search, on the ink ground of the home hero. Delta styles it with two ids from an inline
+   style that loads after this file, so these selectors name #my_home_value to out-rank it */
+#dmg_layout_internal.dmg_internal_area_myhomevalue #mainContent{background:#1F1B16 none}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch{max-width:880px;margin:0 auto;
+  padding:clamp(56px,8vw,112px) clamp(16px,4vw,40px);background:transparent}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .tab,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .content{position:static;float:none;width:auto;
+  margin:0;padding:0;background:transparent;border:0}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .tab > label{display:block;height:auto;margin:0 0 16px;padding:0;
+  background:transparent;border:0;font:italic 400 clamp(44px,6vw,80px)/1.02 "Fraunces",Georgia,serif;letter-spacing:-.02em;
+  text-transform:none;color:#FAF8F4}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .avm_desc{display:block;margin:0 0 28px;padding:0;
+  font:300 clamp(18px,2vw,22px)/1.45 "Urbanist","Avenir Next",system-ui,sans-serif;text-transform:none;color:#E3DED4}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont{display:flex;margin:0;padding:0}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont input{height:60px;margin:0;padding:0 18px;
+  background:#FFFFFF;border:0;border-right:1px solid #CFC7B8;border-radius:0;box-shadow:none;
+  font:400 17px "Urbanist","Avenir Next",system-ui,sans-serif;text-transform:none;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont #addressAutocomplete{flex:1 1 auto;width:auto}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont #unit{flex:0 0 96px;width:96px;max-width:none}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont input::placeholder{color:#6E665A;opacity:1;text-transform:none}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont input:focus{outline:2px solid #D5C3A0;outline-offset:-2px}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont button{flex:0 0 64px;width:64px;height:60px;margin:0;padding:0;
+  background:#7A5C30;border:0;border-radius:0;color:#FFFDF8;font-size:20px;cursor:pointer;transition:background-color .2s}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont button:hover{background:#5E4724}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont button:focus-visible{outline:2px solid #D5C3A0;outline-offset:2px}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .avm_disclaimer{padding:14px 0 0;text-align:left;
+  font:400 14px/1.5 "Urbanist","Avenir Next",system-ui,sans-serif;color:#D5C3A0}
+
+/* the explainer; it and the search heading wait for delta-modules.js to swap the copy, failsafe after 1.2s */
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation{background:#FAF8F4}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation .widthContainer{max-width:760px;
+  padding:clamp(56px,8vw,104px) clamp(16px,4vw,40px)}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .tab > label,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .content > .avm_desc,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation .widthContainer{visibility:hidden;animation:rhcModShow 0s 1.2s forwards}
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .tab > label,
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_myhomevalue #dmg_layout_quickSearch .content > .avm_desc,
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation .widthContainer{visibility:visible;animation:none}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation h1{margin:0 0 22px;padding:0;
+  font:italic 400 clamp(34px,4vw,52px)/1.08 "Fraunces",Georgia,serif;letter-spacing:-.02em;text-transform:none;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation p{margin:0 0 16px;
+  font:300 18px/1.65 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation ul{margin:24px 0 30px;padding:0;list-style:none;border-top:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation li{margin:0;padding:16px 0;list-style:none;border-bottom:1px solid #E3DED4;
+  font:400 16px/1.55 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation a{color:#5E4724;text-decoration:underline;
+  text-decoration-thickness:1px;text-underline-offset:4px}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #homeInformation a:hover{color:#7A5C30}
+@media (max-width:560px){
+  #dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont{flex-wrap:wrap}
+  #dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont #addressAutocomplete{flex:1 1 100%;border-right:0;
+    border-bottom:1px solid #CFC7B8}
+  #dmg_layout_internal.dmg_internal_area_myhomevalue #my_home_value .dmg_layout_mainFieldCont #unit{flex:1 1 auto}
+}
+
+/* the report: Delta's navy, Lato and Playfair become the site's bronze, Urbanist and Fraunces.
+   Google's map controls are buttons too, so the button rules skip anything inside .gm-style */
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent p,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent li,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent a,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent label,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent input,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent select,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent button:not(.gm-style button),
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent td,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent th,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent span:not([class*=fa]),
+#dmg_layout_internal.dmg_internal_area_myhomevalue .avm-modal-content{font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent h1,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent h2,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent h3,
+#dmg_layout_internal.dmg_internal_area_myhomevalue .avm-modal-title{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;
+  letter-spacing:-.01em;text-transform:none;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportIntro h1{font-size:clamp(36px,4.4vw,56px);line-height:1.05}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportIntro .intro-content{color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportHeader,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .market-watch-wrapper,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .data-flex-item.market-stats,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent #disclaimer{background:#F3EFE8;border-color:#E3DED4}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .cma-wrapper{background:#F2EADC}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportHeader h2{font-size:28px;line-height:1.2;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .dmg_demographic_heading{color:#1A1814}
+
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent button:not(.gm-style button),
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .activity-button,
+#dmg_layout_internal.dmg_internal_area_myhomevalue .avm-form-submit{background:#7A5C30;border:0;border-radius:0;
+  font-weight:600;letter-spacing:.04em;color:#FFFDF8;transition:background-color .2s}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent button:not(.gm-style button):hover,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .activity-button:hover,
+#dmg_layout_internal.dmg_internal_area_myhomevalue .avm-form-submit:hover{background:#5E4724}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .owner-button{background:transparent;border:1px solid #7A5C30;border-radius:0}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .owner-button,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .owner-button-text{color:#5E4724;font-weight:600;letter-spacing:.04em}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .owner-button:hover{background:#7A5C30}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .owner-button:hover .owner-button-text{color:#FFFDF8}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .report-cta{border-color:#7A5C30;border-radius:0;color:#5E4724}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .value_amount{font-family:"Fraunces",Georgia,serif;font-weight:400;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .totalRegisteredBuyers,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .totalRegisteredSimilarBuyers,
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .sold-value-wrapper{border-color:#7A5C30}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent a:not([class]){color:#5E4724}
+/* sold-listing charts (Highcharts): the ink ground of the footer, and Delta's navy and periwinkle years in bronze */
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .highcharts-container{--highcharts-background-color:#1F1B16}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .highcharts-point[fill="#7e8cbc"]{fill:#9C7A48}
+#dmg_layout_internal.dmg_internal_area_myhomevalue #reportContent .highcharts-point[fill="#1a2858"]{fill:#C9A971}
+
+/* ---------- Contact (/contact/) ---------- */
+#dmg_layout_internal.dmg_internal_area_contactus #dmg_layout_internal-page{background:#FAF8F4;color:#1A1814;
+  font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif}
+#dmg_layout_internal.dmg_internal_area_contactus .agent-contact-banner{background:#1F1B16}
+#dmg_layout_internal.dmg_internal_area_contactus .agent-contact-title{font:italic 400 clamp(48px,6vw,84px)/1 "Fraunces",Georgia,serif;
+  letter-spacing:-.02em;text-transform:none;color:#FAF8F4}
+#dmg_layout_internal.dmg_internal_area_contactus .contact-agent-photo{border-radius:0;box-shadow:0 18px 40px rgba(26,24,20,.12)}
+#dmg_layout_internal.dmg_internal_area_contactus .contact-agent-name{font:italic 400 clamp(32px,3vw,40px)/1.1 "Fraunces",Georgia,serif;
+  letter-spacing:-.02em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus .contact-agent-desigs{font:600 13px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;
+  letter-spacing:.12em;text-transform:uppercase;color:#6E665A}
+#dmg_layout_internal.dmg_internal_area_contactus .contact-agent-cell{font:400 18px/1.5 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus .contact-agent-cell a{color:#5E4724;text-decoration:underline;
+  text-decoration-thickness:1px;text-underline-offset:4px}
+#dmg_layout_internal.dmg_internal_area_contactus .agent-office-title{font:italic 400 24px/1.2 "Fraunces",Georgia,serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus .agent-office-list li{font:400 16px/1.55 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_contactus .agent-office-list li.bold{font-weight:600;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus .agent-office-list a{color:#5E4724;text-decoration:underline;text-underline-offset:4px}
+
+/* the form, as the same panel as the market analysis */
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form{background:#FFFFFF;border:1px solid #E3DED4;border-radius:0;
+  padding:clamp(24px,3.4vw,44px);box-shadow:0 18px 40px rgba(26,24,20,.06)}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form h2{margin:0 0 8px;text-align:left;
+  font:italic 400 clamp(28px,2.8vw,34px)/1.1 "Fraunces",Georgia,serif;letter-spacing:-.01em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .rhc-contact-note{margin:0 0 22px;
+  font:300 17px/1.6 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .form-builder{max-width:none;margin:0;padding:0;background:transparent}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form input[type=text],
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form input[type=email],
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form input[type=tel],
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form textarea{margin:0 0 12px;padding:0 14px;height:48px;
+  background:#FFFFFF;border:1px solid #CFC7B8;border-radius:0;box-shadow:none;
+  font:400 16px "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form textarea{height:auto;min-height:120px;padding:12px 14px;line-height:1.5}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form input::placeholder,
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form textarea::placeholder{color:#6E665A;opacity:1}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form input:focus,
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form textarea:focus{border-color:#7A5C30;outline:2px solid #7A5C30;outline-offset:1px}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form label{font:400 15px/1.45 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .services > label{margin:10px 0 10px;
+  font:600 12px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6E665A}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .checkbox-grid label::first-letter{text-transform:uppercase}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form input[type=checkbox]{width:18px;height:18px;margin:0 8px 0 0;
+  vertical-align:-3px;accent-color:#7A5C30}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .form-builder-submit{display:block;width:100%;min-height:54px;margin:8px 0 0;
+  padding:0 24px;background:#7A5C30;border:0;border-radius:0;cursor:pointer;
+  font:600 15px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8;transition:background-color .2s}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .form-builder-submit:hover{background:#5E4724}
+#dmg_layout_internal.dmg_internal_area_contactus #agent-contact-form .form-builder-submit:focus-visible{outline:2px solid #7A5C30;outline-offset:3px}

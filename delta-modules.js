@@ -104,8 +104,47 @@
     return true;
   }
 
+  // Instant estimate, /my-home-value/ (the address search; its report keeps Delta's copy)
+  function homeValue() {
+    var info = document.getElementById("homeInformation");
+    if (!info || !document.getElementById("my_home_value")) return false;
+
+    text(document.querySelector("#dmg_layout_quickSearch .tab > label"), "What's your home worth?");
+    text(document.querySelector("#dmg_layout_quickSearch .content > .avm_desc"),
+      "Enter your address for up to three automated estimates of its value.");
+
+    text(info.querySelector("h1"), "A starting number, in seconds");
+    var p = info.querySelectorAll("p");
+    text(p[0], "The estimates come from automated valuation models. They can't see inside your home or " +
+      "know what you've updated, so treat them as a range to start from, not a price.");
+    text(p[1], "Your report also shows:");
+    var items = info.querySelectorAll("li");
+    var lines = ["Buyer demand: how many registered home shoppers are looking for a home like yours",
+      "The local market: homes for sale, the average price and average days on market",
+      "Homes for sale near you, with their prices and days on market"];
+    for (var i = 0; i < items.length && i < lines.length; i++) text(items[i], lines[i]);
+    if (p[2]) {
+      p[2].textContent = "";
+      p[2].append("Want a number you can list at? I'll give you an honest pricing opinion based on what " +
+        "has actually closed near you. ", link("sms:+16164308838", "Text me at 616-430-8838"), ".");
+    }
+    return true;
+  }
+
+  // Contact, /contact/
+  function contact() {
+    var box = document.getElementById("agent-contact-form");
+    if (!box) return false;
+    var note = document.createElement("p");
+    note.className = "rhc-contact-note";
+    note.textContent = "Text or call me, or send a note here. You'll hear back from me, not an assistant.";
+    var h2 = box.querySelector("h2");
+    if (h2) h2.after(note);
+    return true;
+  }
+
   function run() {
-    if (vma() || marketWatch()) document.documentElement.classList.add("rhc-mod");
+    if (vma() || marketWatch() || homeValue() || contact()) document.documentElement.classList.add("rhc-mod");
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", run);

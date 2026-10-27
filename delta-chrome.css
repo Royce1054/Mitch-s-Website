@@ -4,7 +4,9 @@
 
    CONTRACT
      1. Every selector starts with #dmg_layout_wrapper > header,
-        #dmg_layout_wrapper > footer or #dmg_layout_wrapper > .footer-disclaimer.
+        :is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer or the same
+        > .footer-disclaimer. The home value report nests Delta's footer inside
+        #dmg_layout_internal-page, so the footer roots name both parents.
         The one exception closes the gap above an RHC block and names #rhc.
      2. Restyle only. Never hide, fade, or set text below 12px. The Key Realty
         logo, office address, Equal Housing mark and agency licence block are
@@ -58,24 +60,24 @@
 #dmg_layout_wrapper > #dmg_layout_internal:has(#rhc) > #dmg_layout_internal-page{padding-top:0;padding-bottom:0}
 
 /* Footer band: ink, the same ground as the home hero, so the site closes the way it opens */
-#dmg_layout_wrapper > footer{background:#1F1B16;color:#FAF8F4}
-#dmg_layout_wrapper > footer .footer-agent h4{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer{background:#1F1B16;color:#FAF8F4}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer .footer-agent h4{font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:400;
   letter-spacing:-.02em;text-transform:lowercase;color:#FAF8F4}
-#dmg_layout_wrapper > footer .footer-agent h4::first-letter{text-transform:uppercase}
-#dmg_layout_wrapper > footer .footer-contact-info,
-#dmg_layout_wrapper > footer .footer-office{font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;color:#E3DED4}
-#dmg_layout_wrapper > footer .footer-contact-info .name{font-weight:600;color:#FAF8F4}
-#dmg_layout_wrapper > footer a.footer-phone{color:#FAF8F4}
-#dmg_layout_wrapper > footer .footer_contact a{color:#F2EADC;text-decoration:underline;
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer .footer-agent h4::first-letter{text-transform:uppercase}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer .footer-contact-info,
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer .footer-office{font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif;color:#E3DED4}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer .footer-contact-info .name{font-weight:600;color:#FAF8F4}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer a.footer-phone{color:#FAF8F4}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer .footer_contact a{color:#F2EADC;text-decoration:underline;
   text-decoration-thickness:1px;text-underline-offset:5px}
-#dmg_layout_wrapper > footer a:hover{color:#D5C3A0}
-#dmg_layout_wrapper > footer a:focus-visible{outline:2px solid #D5C3A0;outline-offset:3px}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer a:hover{color:#D5C3A0}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > footer a:focus-visible{outline:2px solid #D5C3A0;outline-offset:3px}
 
 /* Fine print: recessed cream, quieter type, every line still there */
-#dmg_layout_wrapper > .footer-disclaimer{background:#F3EFE8;color:#5F574C;
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > .footer-disclaimer{background:#F3EFE8;color:#5F574C;
   font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif}
-#dmg_layout_wrapper > .footer-disclaimer .footer-disclaimer-wrapper,
-#dmg_layout_wrapper > .footer-disclaimer .footer-disclaimer-wrapper *{font-size:13px;line-height:1.6}
-#dmg_layout_wrapper > .footer-disclaimer a{color:#5E4724;text-underline-offset:3px}
-#dmg_layout_wrapper > .footer-disclaimer a:focus-visible{outline:2px solid #7A5C30;outline-offset:3px}
-#dmg_layout_wrapper > .footer-disclaimer img{mix-blend-mode:multiply}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > .footer-disclaimer .footer-disclaimer-wrapper,
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > .footer-disclaimer .footer-disclaimer-wrapper *{font-size:13px;line-height:1.6}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > .footer-disclaimer a{color:#5E4724;text-underline-offset:3px}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > .footer-disclaimer a:focus-visible{outline:2px solid #7A5C30;outline-offset:3px}
+:is(#dmg_layout_wrapper,#dmg_layout_internal-page) > .footer-disclaimer img{mix-blend-mode:multiply}
