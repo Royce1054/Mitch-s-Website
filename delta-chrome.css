@@ -31,14 +31,17 @@
 @media (min-width:1260px){
   #dmg_layout_wrapper > header #dmg_nav_top > li > a{font-size:15px;font-weight:500;letter-spacing:.01em;color:#1A1814}
   #dmg_layout_wrapper > header #dmg_nav_top > li > a:hover,
-  #dmg_layout_wrapper > header #dmg_nav_top > li:focus-within > a{color:#7A5C30;text-decoration:underline;
+  #dmg_layout_wrapper > header #dmg_nav_top > li:hover > a,
+  #dmg_layout_wrapper > header #dmg_nav_top > li:focus-within > a{background:transparent;color:#7A5C30;text-decoration:underline;
     text-decoration-thickness:1px;text-underline-offset:7px}
   #dmg_layout_wrapper > header #dmg_layout_homefinder,
   #dmg_layout_wrapper > header #dmg_layout_homefinder a{font-size:13px;font-weight:600;letter-spacing:.08em;color:#7A5C30}
   #dmg_layout_wrapper > header .sub-nav{background:#FFFFFF;border:1px solid #E3DED4;box-shadow:0 12px 28px rgba(26,24,20,.10)}
-  #dmg_layout_wrapper > header .sub-nav a{background:transparent;color:#1A1814;font-size:15px}
-  #dmg_layout_wrapper > header .sub-nav a:hover,
-  #dmg_layout_wrapper > header .sub-nav a:focus-visible{background:#F2EADC;color:#5E4724}
+  /* #dmg_nav_top in these selectors out-ranks Delta's #dmg_advanced_nav #dmg_nav_top ul li a,
+     which fills dropdown links with the theme's Primary Color */
+  #dmg_layout_wrapper > header #dmg_nav_top .sub-nav a{background:transparent;color:#1A1814;font-size:15px}
+  #dmg_layout_wrapper > header #dmg_nav_top .sub-nav a:hover,
+  #dmg_layout_wrapper > header #dmg_nav_top .sub-nav a:focus-visible{background:#F2EADC;color:#5E4724}
 }
 
 /* No white gap between Delta's header and a full-bleed RHC block */
