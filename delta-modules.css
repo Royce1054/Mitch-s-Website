@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Delta modules: restyles DeltaNET's predefined pages (fixed templates whose
+   content the admin cannot edit) so they read as part of the RHC design.
+   Fonts load from delta-chrome.css. Copy changes live in delta-modules.js.
+
+   CONTRACT
+     1. Every selector starts with #dmg_layout_internal.dmg_internal_area_<PAGE>,
+        so a rule can only touch the page it names.
+     2. Never hide, fade or shrink below 12px a form field, consent line, terms
+        link or listing attribution. Decorative icons may go.
+     3. The intro waits for delta-modules.js to swap the copy, with a CSS
+        failsafe: it shows after 1.2s whatever the script does.
+     4. Colours are DESIGN.md tokens; one radius: 0.
+   ========================================================================== */
+
+/* ---------- Virtual Market Analysis (/listings/VMA.php) ---------- */
+#dmg_layout_internal.dmg_internal_area_VMA{background:#FAF8F4;margin-top:0;color:#1A1814;
+  font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_internal-page{max-width:1180px;margin:0 auto;
+  padding:clamp(48px,7vw,104px) clamp(16px,4vw,40px);background:transparent}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_wrapper{display:grid;gap:clamp(36px,5vw,80px);align-items:start;
+  max-width:none;padding:0}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc{padding:0}
+@media (min-width:1024px){
+  #dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_wrapper{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+  #dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc{position:sticky;top:32px}
+}
+
+/* intro: hidden only until the copy swap, failsafe after 1.2s */
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc{visibility:hidden;animation:rhcModShow 0s 1.2s forwards}
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc{visibility:visible;animation:none}
+@keyframes rhcModShow{to{visibility:visible}}
+
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc h1{margin:0 0 22px;padding:0;
+  font:italic 400 clamp(44px,5.4vw,76px)/1.02 "Fraunces",Georgia,serif;letter-spacing:-.02em;color:#1A1814;text-wrap:balance}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc h2{margin:0 0 18px;padding:0;
+  font:300 clamp(20px,2vw,24px)/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814;text-wrap:balance}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc p{margin:0 0 14px;max-width:34em;
+  font:300 17px/1.65 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc a{color:#5E4724;text-decoration:underline;
+  text-decoration-thickness:1px;text-underline-offset:4px}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc a:hover{color:#7A5C30}
+#dmg_layout_internal.dmg_internal_area_VMA .bullets-wrapper{margin:30px 0 0;padding:0;border-top:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_area_VMA .dmg_vma_bullets{display:block;margin:0;padding:16px 0;border-bottom:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_area_VMA .dmg_vma_bullets .bullet-icon{display:none}
+#dmg_layout_internal.dmg_internal_area_VMA .dmg_vma_bullets .bullet-desc{display:block;margin:0;padding:0;
+  font:400 16px/1.5 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+
+/* the form, as a panel */
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register{max-width:none;background:#FFFFFF;border:1px solid #E3DED4;
+  padding:clamp(24px,3.4vw,44px);box-shadow:0 18px 40px rgba(26,24,20,.06)}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register #market_info{background:transparent;padding:0}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register fieldset{margin:0;padding:0;border:0;min-width:0}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register ul{margin:0;padding:0;list-style:none}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register li{margin:0 0 26px;padding:0;list-style:none}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register h2{margin:0;padding:0;text-align:left;
+  font:italic 400 clamp(28px,2.8vw,34px)/1.1 "Fraunces",Georgia,serif;letter-spacing:-.01em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .about-title,
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .full-label-wrapper > label{display:block;margin:0 0 10px;
+  font:600 12px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6E665A}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .form-flex{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .form-flex-item{width:auto;margin:0;padding:0}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .form-flex-item.full-width{grid-column:1 / -1}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input[type=text],
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input[type=number],
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input[type=email],
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input[type=tel],
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register select{width:100%;height:48px;margin:0;padding:0 14px;
+  background:#FFFFFF;border:1px solid #CFC7B8;border-radius:0;box-shadow:none;
+  font:400 16px "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input::placeholder{color:#6E665A;opacity:1}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input:focus,
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register select:focus{border-color:#7A5C30;outline:2px solid #7A5C30;outline-offset:1px}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .info_tab{display:inline-flex;align-items:center;min-height:44px;margin:0 -1px 12px 0;
+  padding:0 18px;background:#FFFFFF;border:1px solid #CFC7B8;border-radius:0;cursor:pointer;white-space:nowrap;
+  font:500 14px "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .info_tab.active_tab{background:#7A5C30;border-color:#7A5C30;color:#FFFDF8}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .content-control{color:#5E4724;
+  font:500 15px "Urbanist","Avenir Next",system-ui,sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .full-label-wrapper{display:block;text-align:left}
+/* "Receive this report" wraps the opt-in checkbox for the recurring email: a checkbox line, not a heading */
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .full-label-wrapper > #dmg_monthly_label{display:flex;align-items:center;
+  margin:0 0 12px;font:400 15px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:0;text-transform:none;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register #sms_allow_label,
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register #agree_label{display:block;
+  font:400 13px/1.55 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register input[type=checkbox]{width:18px;height:18px;margin:0 8px 0 0;
+  vertical-align:-3px;accent-color:#7A5C30}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register a{color:#5E4724}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_marketwatch_submit{display:block;width:100%;min-height:54px;margin:8px 0 0;padding:0 24px;
+  background:#7A5C30;border:0;border-radius:0;cursor:pointer;
+  font:600 15px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;text-transform:none;color:#FFFDF8;transition:background-color .2s}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_marketwatch_submit:hover{background:#5E4724}
+#dmg_layout_internal.dmg_internal_area_VMA #dmg_marketwatch_submit:focus-visible{outline:2px solid #7A5C30;outline-offset:3px}
+@media (max-width:560px){
+  #dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .form-flex{grid-template-columns:minmax(0,1fr)}
+}
