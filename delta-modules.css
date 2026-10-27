@@ -204,11 +204,13 @@ html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatc
   font-family:"Urbanist","Avenir Next",system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;color:#1A1814}
 #dmg_layout_internal.dmg_internal_subarea_mapsearch ul.search-bar-top > li > label:hover{color:#7A5C30}
 #dmg_layout_internal.dmg_internal_subarea_mapsearch .nav-save-icon a{color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch ul.search-bar-top .dmg_select_display{white-space:nowrap;line-height:34px;
+  font:600 14px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#1A1814}
 
 #dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar{background:#FAF8F4}
 #dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_results_pagination_total{
   font:500 15px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
-#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_select_display{white-space:nowrap;
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_results_filter .dmg_select_display{white-space:nowrap;
   font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5F574C}
 
 /* listing cards */
@@ -230,6 +232,21 @@ html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatc
 #dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_amen_value{font-weight:700;color:#1A1814}
 #dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_banner{background:#1F1B16;
   font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8}
+/* Price tags are images Delta draws from icon3.php in a hardcoded blue (iconc=6B8AFF, for sale
+   only). This filter takes that blue to the light-bronze token #D5C3A0 and leaves the black price
+   text black (12.6:1). Sold and other statuses keep their own colours. */
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap img[src*="iconc=6B8AFF"]{filter:sepia(90%) saturate(130%) hue-rotate(10deg) brightness(115%)}
+
+/* the listing popup (Delta's .info-window inside Google's info window) */
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .gm-style-iw-c{border-radius:0;box-shadow:0 18px 40px rgba(26,24,20,.16)}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .info-window__price{display:block;margin:0 0 6px;
+  font:400 24px/1.1 "Fraunces",Georgia,serif;font-variant-numeric:tabular-nums;color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .info-window__address{display:block;margin:0 0 8px;font:500 14px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .info-window__stats{display:block;margin:0 0 10px;font:400 14px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .info-window__stats strong{font-weight:600;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .info-window__mls-logo{display:block;font:400 14px/1.45 "Urbanist","Avenir Next",system-ui,sans-serif !important;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmgMap .info-window__mls-logo strong{font-weight:600;color:#1A1814}
+
 /* In the 340px results column Delta floats photo and details side by side, leaving the text
    about 70px wide (the broker credit ran to eight lines). Stack them instead. */
 #dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_results_listing{margin:0 0 14px}
@@ -254,10 +271,12 @@ html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatc
   font-family:"Urbanist","Avenir Next",system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;color:#1A1814}
 #dmg_layout_internal.dmg_internal_subarea_search ul.search-bar-top > li > label:hover{color:#7A5C30}
 #dmg_layout_internal.dmg_internal_subarea_search .nav-save-icon a{color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_search ul.search-bar-top .dmg_select_display{white-space:nowrap;line-height:34px;
+  font:600 14px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#1A1814}
 
 #dmg_layout_internal.dmg_internal_subarea_search .dmg_results_pagination_total{
   font:500 15px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
-#dmg_layout_internal.dmg_internal_subarea_search .dmg_select_display{white-space:nowrap;
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_results_filter .dmg_select_display{white-space:nowrap;
   font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5F574C}
 
 /* listing cards */
