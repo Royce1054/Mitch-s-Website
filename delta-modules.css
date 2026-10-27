@@ -187,3 +187,95 @@ html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatc
   font:600 15px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8;transition:background-color .2s}
 #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit[type=submit]:hover{background:#5E4724}
 #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit[type=submit]:focus-visible{outline:2px solid #7A5C30;outline-offset:3px}
+
+/* ---------- Map search (/map/): Delta's licensed MLS search module ----------
+   Restyle only. The listing-brokerage credit (.dmg_listings_mlsregs) stays at the size of the
+   address, never smaller: NAR's IDX policy wants it no smaller than the median listing text.
+   MLS logos, photos, map and controls are untouched. */
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_results_search{background:#FAF8F4;border-bottom:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmg_layout_qsearch_term_search_bar{height:40px;padding:0 12px;
+  background:#FFFFFF;border:1px solid #CFC7B8;border-radius:0;box-shadow:none;
+  font:400 15px "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmg_layout_qsearch_term_search_bar::placeholder{color:#6E665A;opacity:1}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch #dmg_layout_qsearch_term_search_bar:focus{border-color:#7A5C30;outline:2px solid #7A5C30;outline-offset:1px}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch ul.search-bar-top > li > label,
+#dmg_layout_internal.dmg_internal_subarea_mapsearch ul.search-bar-top > li > span,
+#dmg_layout_internal.dmg_internal_subarea_mapsearch ul.search-bar-top > li > a{
+  font-family:"Urbanist","Avenir Next",system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch ul.search-bar-top > li > label:hover{color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .nav-save-icon a{color:#7A5C30}
+
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar{background:#FAF8F4}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_results_pagination_total{
+  font:500 15px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_select_display{white-space:nowrap;
+  font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5F574C}
+
+/* listing cards */
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_results_listing,
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_details_bg{background:#FFFFFF}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_results_listing{border:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_address{
+  font:500 15px/1.35 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_price{
+  font:400 22px/1.15 "Fraunces",Georgia,serif;font-variant-numeric:tabular-nums;color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_type{
+  font:400 14px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listings_mlsregs,
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listings_mlsregs em{
+  font-family:"Urbanist","Avenir Next",system-ui,sans-serif;font-size:15px;line-height:1.45;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_amen{background:#F3EFE8}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_amen_item{
+  font:500 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_amen_value{font-weight:700;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_listing_banner{background:#1F1B16;
+  font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8}
+/* In the 340px results column Delta floats photo and details side by side, leaving the text
+   about 70px wide (the broker credit ran to eight lines). Stack them instead. */
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_results_listing{margin:0 0 14px}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_results_listing_photo{float:none;width:100%;height:auto}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_results_photo{display:block;width:100%;height:auto;
+  aspect-ratio:4 / 3;object-fit:cover}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_results_listing_details{float:none;width:auto;padding:14px 16px 16px}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_results_listing_details > *{display:block;margin:0 0 4px}
+#dmg_layout_internal.dmg_internal_subarea_mapsearch .dmg_map_sidebar .dmg_listing_price{margin:2px 0 6px}
+
+/* ---------- Property search results (/results/): same module, gallery layout ---------- */
+#dmg_layout_internal.dmg_internal_subarea_search h1{font:italic 400 clamp(32px,4vw,44px)/1.1 "Fraunces",Georgia,serif;letter-spacing:-.01em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_results_search{background:#FAF8F4;border-bottom:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_subarea_search #dmg_layout_qsearch_term_search_bar{height:40px;padding:0 12px;
+  background:#FFFFFF;border:1px solid #CFC7B8;border-radius:0;box-shadow:none;
+  font:400 15px "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_search #dmg_layout_qsearch_term_search_bar::placeholder{color:#6E665A;opacity:1}
+#dmg_layout_internal.dmg_internal_subarea_search #dmg_layout_qsearch_term_search_bar:focus{border-color:#7A5C30;outline:2px solid #7A5C30;outline-offset:1px}
+#dmg_layout_internal.dmg_internal_subarea_search ul.search-bar-top > li > label,
+#dmg_layout_internal.dmg_internal_subarea_search ul.search-bar-top > li > span,
+#dmg_layout_internal.dmg_internal_subarea_search ul.search-bar-top > li > a{
+  font-family:"Urbanist","Avenir Next",system-ui,sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_search ul.search-bar-top > li > label:hover{color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_search .nav-save-icon a{color:#7A5C30}
+
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_results_pagination_total{
+  font:500 15px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_select_display{white-space:nowrap;
+  font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5F574C}
+
+/* listing cards */
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_results_listing,
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_details_bg{background:#FFFFFF}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_results_listing{border:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_address{
+  font:500 15px/1.35 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_price{
+  font:400 22px/1.15 "Fraunces",Georgia,serif;font-variant-numeric:tabular-nums;color:#7A5C30}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_type{
+  font:400 14px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listings_mlsregs,
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listings_mlsregs em{
+  font-family:"Urbanist","Avenir Next",system-ui,sans-serif;font-size:15px;line-height:1.45;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_amen{background:#F3EFE8}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_amen_item{
+  font:500 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#5F574C}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_amen_value{font-weight:700;color:#1A1814}
+#dmg_layout_internal.dmg_internal_subarea_search .dmg_listing_banner{background:#1F1B16;
+  font:600 12px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8}

@@ -13,7 +13,7 @@
      4. Delta's desktop nav starts at 1260px; below it the nav is a dark drawer,
         so nav colours live only inside the min-width query.
    ========================================================================== */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Urbanist:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Urbanist:wght@300;400;500;600&display=swap");
 
 /* Header */
 #dmg_layout_wrapper > header{background:#FAF8F4;border-bottom:1px solid #E3DED4}
