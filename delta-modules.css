@@ -95,3 +95,95 @@ html.rhc-mod #dmg_layout_internal.dmg_internal_area_VMA #dmg_layout_vma_desc{vis
 @media (max-width:560px){
   #dmg_layout_internal.dmg_internal_area_VMA #dmg_vma_register .form-flex{grid-template-columns:minmax(0,1fr)}
 }
+
+/* ---------- Market Watch (/market-watch/) ---------- */
+#dmg_layout_internal.dmg_internal_area_market-watch{background:#FAF8F4;margin-top:0;color:#1A1814;
+  font-family:"Urbanist","Avenir Next","Segoe UI",system-ui,sans-serif}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_layout_internal-page{max-width:1180px;margin:0 auto;
+  padding:clamp(48px,7vw,104px) clamp(16px,4vw,40px);background:transparent}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layoutBG,
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout{width:auto;max-width:none;margin:0;padding:0;background:transparent}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout{display:grid;grid-template-rows:auto 1fr;gap:0 clamp(36px,5vw,80px);align-items:start}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left,
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_right{float:none;width:auto;margin:0;padding:0}
+#dmg_layout_internal.dmg_internal_area_market-watch .clearBoth{display:none}
+@media (max-width:1023px){
+  #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_right{margin-top:clamp(36px,5vw,56px)}
+}
+@media (min-width:1024px){
+  #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout{grid-template-columns:minmax(0,5fr) minmax(0,6fr)}
+  #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout > h1{grid-column:1}
+  #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left{grid-column:1}
+  #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_right{grid-column:2;grid-row:1 / span 2}
+}
+
+/* copy waits for delta-modules.js, failsafe after 1.2s */
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout > h1,
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left,
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_formHeading,
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit{visibility:hidden;animation:rhcModShow 0s 1.2s forwards}
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout > h1,
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left,
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_formHeading,
+html.rhc-mod #dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit{visibility:visible;animation:none}
+
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_layout > h1{margin:0 0 22px;padding:0;text-align:left;
+  font:italic 400 clamp(44px,5.4vw,76px)/1.02 "Fraunces",Georgia,serif;letter-spacing:-.02em;color:#1A1814;text-wrap:balance}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_heading{margin:0 0 18px;padding:0;
+  font:300 clamp(20px,2vw,24px)/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left p{margin:0 0 14px;max-width:34em;
+  font:300 17px/1.65 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left a{color:#5E4724;text-decoration:underline;
+  text-decoration-thickness:1px;text-underline-offset:4px}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_features{margin:30px 0 0;padding:0;border-top:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_area_market-watch .dmg_marketwatch_feature{display:block;margin:0;padding:16px 0;border-bottom:1px solid #E3DED4}
+#dmg_layout_internal.dmg_internal_area_market-watch .dmg_marketwatch_feature img{display:none}
+#dmg_layout_internal.dmg_internal_area_market-watch .dmg_marketwatch_feature div{margin:0;padding:0;width:auto;height:auto}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_left .dmg_marketwatch_feature p{margin:0;max-width:none;
+  font:400 16px/1.5 "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_preview{width:auto;margin:22px 0 0;cursor:pointer}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_preview img{display:none}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_preview .rhc-mw-sample{display:inline-flex;align-items:center;min-height:44px;
+  padding:0 20px;border:1px solid #7A5C30;font:500 15px "Urbanist","Avenir Next",system-ui,sans-serif;color:#5E4724;background:transparent}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_preview:hover .rhc-mw-sample{background:#F2EADC}
+
+/* the form, as a panel; Delta sets widths and a border inline, hence the !important */
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_formBG{width:auto;margin:0;background:#FFFFFF;border:1px solid #E3DED4;
+  padding:clamp(24px,3.4vw,44px);box-shadow:0 18px 40px rgba(26,24,20,.06)}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form{width:auto !important;padding:0 !important;margin:0}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_formHeading{width:auto;margin:0 0 26px;padding:0;border:0;text-align:left;
+  font:italic 400 clamp(28px,2.8vw,34px)/1.1 "Fraunces",Georgia,serif;letter-spacing:-.01em;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form fieldset{margin:0 0 22px !important;padding:0;border:0 !important;min-width:0;width:auto !important}
+#dmg_layout_internal.dmg_internal_area_market-watch .dmg_marketwatch_h2{margin:0 0 10px;padding:0;
+  font:600 12px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6E665A}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form input[type=text],
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form select{display:block;width:100%;height:48px;margin:0 0 10px;padding:0 14px;
+  background:#FFFFFF;border:1px solid #CFC7B8;border-radius:0;box-shadow:none;
+  font:400 16px "Urbanist","Avenir Next",system-ui,sans-serif;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form input::placeholder{color:#6E665A;opacity:1}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form input:focus,
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form select:focus{border-color:#7A5C30;outline:2px solid #7A5C30;outline-offset:1px}
+#dmg_layout_internal.dmg_internal_area_market-watch .dmg_marketwatch_orImage{display:none}
+#dmg_layout_internal.dmg_internal_area_market-watch .rhc-mw-or{display:block;margin:4px 0 10px;text-align:center;
+  font:500 13px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6E665A}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_showmap{display:flex;align-items:center;justify-content:center;width:auto;min-height:44px;
+  margin:0 0 22px;padding:0 18px;background:transparent !important;border:1px solid #7A5C30;border-radius:0;
+  font:500 15px "Urbanist","Avenir Next",system-ui,sans-serif;color:#5E4724 !important;text-decoration:none}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_showmap:hover{background:#F2EADC !important}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_showmap i{display:none}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_dropdown{width:auto;margin:0 0 18px}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_dropdown label{display:block;margin:0 0 8px;
+  font:600 12px/1.4 "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6E665A}
+#dmg_layout_internal.dmg_internal_area_market-watch div[id=dmg_marketwatch_checkbox]{display:flex;align-items:flex-start;gap:10px;width:auto;margin:0 0 14px}
+#dmg_layout_internal.dmg_internal_area_market-watch div[id=dmg_marketwatch_checkbox] input[type=checkbox]{flex:none;width:18px;height:18px;margin:2px 0 0;accent-color:#7A5C30}
+#dmg_layout_internal.dmg_internal_area_market-watch div[id=dmg_marketwatch_checkbox] label{width:auto;
+  font:400 13px/1.55 "Urbanist","Avenir Next",system-ui,sans-serif;color:#5F574C}
+#dmg_layout_internal.dmg_internal_area_market-watch div[id=dmg_marketwatch_checkbox] label#rhc-mw-contact,
+#dmg_layout_internal.dmg_internal_area_market-watch div[id=dmg_marketwatch_checkbox]:first-of-type label{font-size:15px;color:#1A1814}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_form a{color:#5E4724}
+#dmg_layout_internal.dmg_internal_area_market-watch .g-recaptcha{width:auto;margin:0 0 14px}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit[type=submit]{display:block;width:100%;max-width:none;height:auto;min-height:54px;margin:8px 0 0;padding:0 24px;
+  background:#7A5C30;border:0;border-radius:0;cursor:pointer;
+  font:600 15px "Urbanist","Avenir Next",system-ui,sans-serif;letter-spacing:.04em;color:#FFFDF8;transition:background-color .2s}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit[type=submit]:hover{background:#5E4724}
+#dmg_layout_internal.dmg_internal_area_market-watch #dmg_marketwatch_submit[type=submit]:focus-visible{outline:2px solid #7A5C30;outline-offset:3px}
